@@ -45,7 +45,6 @@ a{
     line-height: 50px;
     width: 100%;
     text-align: center;
-    color: #0fd;
     position: relative;
     margin: 10px 0;
 }
@@ -61,8 +60,9 @@ a{
 .nav-text{
     opacity: 0;
     font-size: 16px;
+    color: #00ffff;
 }
-.active{
+.active .nav-icon,.active .nav-text{
     color: #00ffff;
 }
 .nav-icon{
@@ -91,32 +91,27 @@ a{
 .social-icons:hover{
     color: #00ffff;
     transform: scale(1.25);
-
 }
-.body{
+.body-wrapper{
     position: absolute;
     left: 60px;
-    top: 7%;
+    height: 100%;
+    width: calc(100% - 60px);
     color: #555;
     font-family: cursive;
     font-size: 18px;
 }
-.home,.about{
-    height: 754px;
-    width: 100%;
+.body{
+    font-family: cursive;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 4%;
+    left: 5%;
 }
-.home{
-    left: 60px;
-}
-
 .text-content{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 60px;
+    left: 90px;
     color: white;
 }
 .text-content h1::before{
@@ -149,8 +144,10 @@ a{
 }
 .show{
     font-family: sans-serif,'Courier New', Courier, monospace;
-    letter-spacing: -6px;
+    letter-spacing: -16px;
+    word-spacing: 0px;
     opacity: 0;
+    margin: 0;
     line-height: 50px;
     font-size: 50px;
     display: inline-block;
@@ -201,10 +198,6 @@ a{
     100% {transform: scale(1);
     opacity: 1;}
 }
-
-.intro{
-    
-}
 @media screen and (max-width:1000px){
     .showA{
         display:none;
@@ -218,7 +211,7 @@ a{
     height: 200px;
     width: 400px;
     text-align: center;
-    animation: slide 3s forwards;
+    animation: slide 2s forwards;
     overflow: hidden;
 }
 @keyframes slide{
@@ -241,17 +234,64 @@ a{
     width: 100%;
     background: #00ffff;
     /* border-bottom: 1px solid #00ffff; */
-    height: 4px;
+    height: 1px;
 }
 .move{
     width: 100%;
-    animation: shift 2.4s forwards .6s;
+    animation: shift 1.4s forwards .6s;
     left: -100%;
     position: absolute;
-    height: 4px;
+    height: 1px;
     margin: 0;
     background: rgb(17, 39, 36);
 }
 @keyframes shift{
     to{left: 0%;};
+}
+
+.about{
+    position: absolute;
+    top: 23%;
+    left: 120px;
+    height: 400px;
+    width: 500px;
+    animation: scale .3s;
+}
+@keyframes scale{
+    from{transform: scale(0);}
+    to{ transform: scale(1); }
+}
+.about h1{
+    color: #00ffff;
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+.about h1::before{
+    content: '<h1>';
+    opacity: 0;
+    position: absolute;
+    top: -5%;
+    color: #555;
+    font-family: 'La Belle Aurore',cursive;
+    font-size: 14px;
+    animation: opac .5s ease .1s forwards;
+}
+.about h1::after{
+    content: '</h1>';
+    color: #555;
+    position: relative;
+    font-family: 'La Belle Aurore',cursive;
+    font-size: 14px;
+    opacity: 0;
+    margin-left: 10px; 
+    animation: opac .5s ease forwards;
+}
+.info{
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
 }
