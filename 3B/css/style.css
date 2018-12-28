@@ -7,6 +7,11 @@ body{
     background-color: #252627;
     font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 a{
     text-decoration: none;
     color: white;
@@ -294,4 +299,94 @@ a{
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
+}
+.contactMe{
+    position: absolute;
+    left: 110px;
+    top: 21%;
+
+}
+.contact-us{
+    color: #00ffff;
+}
+input{
+    background-color: #37393b;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 0px 0 20px;
+    box-sizing: border-box;
+}
+textarea{
+    height: 150px;
+    width: 100%;
+    background-color: #37393b;
+    font-size: 16px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+    font-family: sans-serif;
+    max-width: 100%;
+    max-height: 200px;
+}
+ul li{
+    margin: 8px 0px;
+}
+.half{
+    width: 49.3%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.contact-us{
+    margin: 0;
+    margin-bottom: 30px;
+}
+.contact-us::before{
+    content: '<h1>';
+    opacity: 0;
+    position: absolute;
+    top: -7%;
+    margin: 3px 0;
+    left: 0px;
+    color: #555;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 14px;
+    animation: opac .5s ease .1s forwards;
+}
+.contact-us::after{
+    content: '<h1/>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #515152;
+    font-size: 14px;
+    position: absolute;
+    left: -10px;
+    top: 55px;
+    margin-left: 10px;
+    opacity: 0;
+    animation: opac .5s ease 1.2s forwards;
+}
+.send{
+    color: #08fdd8;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #08fdd8;
+    float: left;
+    border-radius: 4px;
+    background: transparent;
+    text-transform: uppercase;
+    float: right;
+    margin-top: 4px; 
+    text-align: center;
+}
+ul li:nth-child(3){
+    margin: 0px 0;
+}
+.map{
+    width: 50%;
+    float: right;
+    height: 100%;
 }
