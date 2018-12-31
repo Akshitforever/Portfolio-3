@@ -64,7 +64,50 @@ var page = [`
         </p>
     </div>
 </div>
-<div class="body" style="top:90%">&lt;body&gt;</div>`]
+<div class="body" style="top:90%">&lt;body&gt;</div>`,
+`
+<div class="body">&lt;body&gt;</div>
+      	<div class="contactMe">
+      		<h1 class="contact-us">
+	    		<span class="show">C</span>
+	            <span class="show">o</span>
+	            <span class="show">n</span>
+	            <span class="show">t</span>
+	            <span class="show">a</span> 
+	            <span class="show">c</span>
+	            <span class="show">t</span> &nbsp; 
+	            <span class="show">M</span>
+	            <span class="show">e</span>
+    		</h1>
+    		<p style="color:white; font-size: 15px; font-family: sans-serif; padding: 0 2px; box-sizing: border-box;">If you have any 
+    		questions, don't hesitate just ask anything you want...</p>
+      		<form class="myform">
+
+	      			<ul>
+	      				<li class="half">
+	      					<input type="name" placeholder="Name">
+	      					<label class="input-label"></label>
+	      				</li>
+	      				<li class="half">
+	      					<input type="email" placeholder="Email">
+	      					<label class="input-label"></label>
+	      				</li>
+	      				<li>
+	      					<input type="Password" placeholder="Password">
+	      					<label class="input-label"></label>
+	      				</li>
+	      				<li>
+	      					<textarea placeholder="Message" ></textarea>
+	      					<label class="input-label"></label>
+	      				</li>
+	      				<button type="submit" value="Send" class="send">SEND</button>
+	      			</ul>
+      		</form>
+      	</div>
+      		<iframe src="http://maps.google.com/maps?q=30.3773126,76.1539556&z=15&output=embed" width="657" height="389" frameborder="0" style="border:0" class="map"></iframe>
+      	 <div class="body" style="top:90%">&lt;/body&gt;</div>
+`
+]
 showUp(document.querySelectorAll('.show'));
 active = 0
 function showUp(text){
